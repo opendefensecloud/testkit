@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version: ${{ env.GO_VERSION }}
-      - name: lint-license-and-shell
+      - name: lint-license
         run: |
           make lint-no-golangci
       - name: golangci-lint
@@ -44,6 +44,10 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
       - name: test
         run: make test
+      - name: Convert coverage to lcov
+        uses: jandelgado/gcov2lcov-action@v1.2.0
+        with:
+          infile: testkit.coverprofile
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.3.7
         with:

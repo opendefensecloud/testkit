@@ -1,4 +1,4 @@
-// Copyright 2026 BWI GmbH and Solution Arsenal contributors
+// Copyright 2026 BWI GmbH and Testkit contributors
 // SPDX-License-Identifier: Apache-2.0
 
 package container
