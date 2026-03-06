@@ -78,7 +78,7 @@ lint: lint-no-golangci golangci-lint ## Run linters such as golangci-lint and ad
 
 .PHONY: lint-no-golangci
 lint-no-golangci: addlicense
-	find . -not -path '*/.*' -name '*.go' -exec $(ADDLICENSE) -check -l apache -s=only -check {}
+	find . -not -path '*/.*' -name '*.go' -exec $(ADDLICENSE) -check -l apache -s=only {} ';'
 
 .PHONY: scan
 scan:
