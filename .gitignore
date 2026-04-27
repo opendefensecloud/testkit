@@ -31,3 +31,9 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+.direnv/
+
+.pre-commit-config.yaml
+
+common.mk
